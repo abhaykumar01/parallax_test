@@ -1,0 +1,247 @@
+@font-face {
+  font-family: myCustomFont;
+  src: url(./assets/fonts/DIN_Condensed_Bold.ttf);
+}
+
+body {
+  margin: 0;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a{ cursor: pointer;}
+figure{
+  margin:0px;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app{
+ 
+}
+
+.header{
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  font-family: myCustomFont;
+  background: rgba(72, 70 ,70,  0.5);
+  padding: 14px 0;
+}
+.leftMenu{
+  width:49%;
+  text-align: left;
+  float:left;
+  font-size: 2.2em;
+  font-weight: bold;
+  padding-left: 1%;
+  color:#000;
+}
+.rightMenu{
+  width:49%;
+  text-align: right;
+  float:left;
+  
+  padding-right: 1%;
+}
+.rightMenu ul{
+  list-style: none;
+  margin:0;
+}
+.rightMenu li{
+  display: inline;
+  padding: 0 15px;
+}
+.rightMenu li a{
+  color:#000;
+  font-size: 1.5em;
+}
+.rightMenu li a.active{
+  font-size: 1.5em;
+  color:#fff
+  
+}
+ .banner{
+    height:100vh;
+    position: relative;
+    background: url('./assets/images/bg-pic.png');
+    background-size: cover;
+  }
+  .img{
+    width: 100%;
+  }
+  .stamp{
+    position: absolute;
+    top: 20vh;
+    background: url('./assets/images/stamp.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    left:20vw;
+
+  }
+.feedsContainer{
+    height: auto;
+    background: #f5f5f5;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feedColumn{
+  width:500px;
+  height:160px;
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  
+}
+.animate__slideInLeft {
+  opacity: 0;
+  animation-name: slideInLeft;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;  
+  animation-fill-mode: both;
+  -webkit-animation-name: slideInLeft;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.animate__slideInRight {
+  opacity: 1;
+  animation-name: slideInRight;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;  
+  animation-fill-mode: both;
+  -webkit-animation-name: slideInRight;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.feedColumn.col1{
+  margin-right: -22em
+}
+.feedColumn.col2{
+  margin-left: -26em;
+}
+.feedColumn.col3{
+  margin-right: -22em
+}
+.feedColumn.col4{
+  margin-left: -26em;
+}
+.feedColumn .text{
+  width: 160px;
+  padding: 12px;
+  font-size: 11px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 14px 3px rgba(199, 199, 199, 0.4);
+  -moz-box-shadow:    0px 0px 14px 3px rgba(199, 199, 199, 0.4);
+  box-shadow:         0px 0px 14px 3px rgba(199, 199, 199, 0.4);
+}
+.feedColumn .text span{
+  font-weight: bold;
+    display: block;
+    font-size: 16px;
+    padding: 5px 0;
+}
+.feedColumn .image{
+  width: 160px;
+  border: 10px solid #fff;
+  margin: 0 0 0 30px;
+  position: relative;
+  background: url('./assets/images/food.jpeg');
+  background-size: cover;
+  -webkit-box-shadow: 0px 0px 14px 3px rgba(199, 199, 199, 0.4);
+  -moz-box-shadow:    0px 0px 14px 3px rgba(199, 199, 199, 0.4);
+  box-shadow:         0px 0px 14px 3px rgba(199, 199, 199, 0.4);
+}
+.feedColumn .image .instbtn{
+  background: url('./assets/images/instagram-btn.png');
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+}
+.starBg{
+  background: url('./assets/images/bg-detail.png');
+  background-repeat: no-repeat;
+  background-position-x: 260px;
+  background-position-y: bottom;
+}
+.dottedBg{
+  background: url('./assets/images/detail03.png');
+  background-repeat: no-repeat;
+  background-position-x: 150px;
+  background-position-y: bottom;
+}
+.community_container{
+    background: #f5f5f5;
+    height: auto;
+}
+.community_container h1{
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left: 1%;
+  margin: 0;
+}
+.communityflexContainer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.community_container .col1{
+  width: 20vw;
+  height: 560px;
+  background: #333;
+  margin:0 10px;
+}
+
+.community_container .col2{
+  width: 20vw;
+  height: 560px;
+  background: #ff0000;
+  margin:0 10px;
+}
+.location{
+    height: 740px;
+    position: relative;
+    background: #f5f5f5;
+    background: url('./assets/images/map.png');
+    background-size: cover;
+  }
